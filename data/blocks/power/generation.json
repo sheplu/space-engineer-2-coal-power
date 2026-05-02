@@ -1,0 +1,61 @@
+{
+  "version": "0.1.0",
+  "generatedAt": "2026-05-01",
+  "game": {
+    "name": "Space Engineers 2",
+    "stage": "Early Access",
+    "dataAsOf": "2026-05-01"
+  },
+  "mod": {
+    "name": "Coal Power",
+    "version": "0.1.0",
+    "baseGameDataVersion": "1.1.0"
+  },
+  "sources": [],
+  "notes": "New power-generation block. Slots into the vanilla power curve between Solar Panel 10 m (4 kW) and Reactor 2.5 m (~20 kW). Accepts either raw coal (8 kW) or coal briquettes (24 kW) — the base block schema's fuel.consumesId field is single-valued, so the primary fuel is declared as coal_briquette and the raw-coal fallback is documented in description + dataGaps. BuildComponents reuse vanilla simple/complex components to keep the mod standalone. Stats first-pass.",
+  "resources": [
+    {
+      "id": "combustion_generator_2_5_m",
+      "displayName": "Combustion Generator 2.5 m",
+      "type": "block",
+      "subcategory": "power",
+      "powerRole": "generator",
+      "size_m": 2.5,
+      "mass_kg": 1800,
+      "health": 1440,
+      "pcu": 50,
+      "snapSize": 10,
+      "description": "Burns coal or (preferred) coal briquettes to generate electricity. Raw coal yields ~8 kW at 1 unit per 30 s; briquettes yield ~24 kW at 1 unit per 10 s. Produces ash as a combustion byproduct. Unlocks earlier than the uranium reactor and fills the early-game planetary power gap.",
+      "gameStatus": "active",
+      "buildComponents": [
+        { "id": "steel_plate", "qty": 20 },
+        { "id": "combustion_chamber", "qty": 4 },
+        { "id": "turbine_blades", "qty": 6 },
+        { "id": "pressure_pipe", "qty": 3 },
+        { "id": "motor", "qty": 2 },
+        { "id": "wire", "qty": 4 }
+      ],
+      "power": {
+        "maxOutput": 24000,
+        "unit": "W",
+        "unitAsPublished": "W"
+      },
+      "fuel": {
+        "consumesId": "coal_briquette",
+        "rate": 0.1
+      },
+      "inventory": {
+        "maxMass_kg": 4000
+      },
+      "unlock": "Verdure sector, 40% contract progress",
+      "wiki": "https://github.com/sheplu/space-engineer-2-coal-power",
+      "dataGaps": [
+        "fuel.rate-units-unconfirmed-assumed-units-per-second",
+        "raw-coal-fuel-mode-not-expressed-in-schema",
+        "ash-byproduct-rate-not-expressed-in-schema",
+        "power-calibration-first-pass",
+        "wiki-not-yet-authored"
+      ]
+    }
+  ]
+}

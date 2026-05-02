@@ -1,0 +1,44 @@
+{
+  "version": "0.1.0",
+  "generatedAt": "2026-05-01",
+  "game": {
+    "name": "Space Engineers 2",
+    "stage": "Early Access",
+    "dataAsOf": "2026-05-01"
+  },
+  "mod": {
+    "name": "Coal Power",
+    "version": "0.1.0"
+  },
+  "notes": "Machine-readable index of every dataset in this mod. Adds coal as a new raw resource, coal briquettes as a refined fuel mirroring the uranium→enriched-uranium pattern, ash as a combustion byproduct (forward-looking hook for Stone & Concrete's cement chain), and one new Combustion Generator 2.5 m block that slots into the power curve between solar and the uranium reactor.",
+  "totalEntries": 4,
+  "datasets": [
+    {
+      "id": "raw-resources",
+      "path": "data/raw-resources.json",
+      "category": "resources",
+      "subcategory": "raw",
+      "description": "Coal — new raw resource found on planetary sedimentary/forested biomes.",
+      "version": "0.1.0",
+      "entryCount": 1
+    },
+    {
+      "id": "items",
+      "path": "data/items.json",
+      "category": "components",
+      "subcategory": "fuel",
+      "description": "Coal Briquette (refined fuel) and Ash (combustion byproduct).",
+      "version": "0.1.0",
+      "entryCount": 2
+    },
+    {
+      "id": "blocks-power-generation",
+      "path": "data/blocks/power/generation.json",
+      "category": "blocks",
+      "subcategory": "power/generation",
+      "description": "Combustion Generator 2.5 m — burns coal or coal briquettes to generate electricity.",
+      "version": "0.1.0",
+      "entryCount": 1
+    }
+  ]
+}
