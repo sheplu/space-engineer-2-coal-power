@@ -1,14 +1,14 @@
 {
-  "version": "0.1.0",
-  "generatedAt": "2026-05-01",
+  "version": "0.2.0",
+  "generatedAt": "2026-05-02",
   "game": {
     "name": "Space Engineers 2",
     "stage": "Early Access",
-    "dataAsOf": "2026-05-01"
+    "dataAsOf": "2026-05-02"
   },
   "mod": {
     "name": "Coal Power",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "baseGameDataVersion": "1.1.0"
   },
   "sources": [],
