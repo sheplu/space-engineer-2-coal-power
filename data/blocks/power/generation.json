@@ -1,18 +1,18 @@
 {
-  "version": "0.1.0",
-  "generatedAt": "2026-05-01",
+  "version": "0.2.0",
+  "generatedAt": "2026-05-02",
   "game": {
     "name": "Space Engineers 2",
     "stage": "Early Access",
-    "dataAsOf": "2026-05-01"
+    "dataAsOf": "2026-05-02"
   },
   "mod": {
     "name": "Coal Power",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "baseGameDataVersion": "1.1.0"
   },
   "sources": [],
-  "notes": "New power-generation block. Slots into the vanilla power curve between Solar Panel 10 m (4 kW) and Reactor 2.5 m (~20 kW). Accepts either raw coal (8 kW) or coal briquettes (24 kW) — the base block schema's fuel.consumesId field is single-valued, so the primary fuel is declared as coal_briquette and the raw-coal fallback is documented in description + dataGaps. BuildComponents reuse vanilla simple/complex components to keep the mod standalone. Stats first-pass.",
+  "notes": "New power-generation block. Slots into the vanilla power curve between Solar Panel 10 m (4 kW) and Reactor 7.5 m (160 kW). Accepts either raw coal (8 kW) or coal briquettes (22 kW) — the base block schema's fuel.consumesId field is single-valued, so the primary fuel is declared as coal_briquette and the raw-coal fallback is documented in description + dataGaps. Power ratio reflects real-world combustion efficiency (briquettes burn cleaner and drive a turbine more efficiently — not because they hold more energy per unit mass). BuildComponents reuse vanilla simple/complex components to keep the mod standalone. Stats first-pass.",
   "resources": [
     {
       "id": "combustion_generator_2_5_m",
@@ -25,7 +25,7 @@
       "health": 1440,
       "pcu": 50,
       "snapSize": 10,
-      "description": "Burns coal or (preferred) coal briquettes to generate electricity. Raw coal yields ~8 kW at 1 unit per 30 s; briquettes yield ~24 kW at 1 unit per 10 s. Produces ash as a combustion byproduct. Unlocks earlier than the uranium reactor and fills the early-game planetary power gap.",
+      "description": "Burns coal or (preferred) coal briquettes to generate electricity. Raw coal yields ~8 kW at 1 unit per 30 s (~15% electrical efficiency, like a primitive coal stove). Briquettes yield ~22 kW at 1 unit per 30 s (~40% efficiency, like a modern coal power plant). Same refinery ratio (1 coal → 1 briquette) — the gain is efficiency, not energy density. Produces ash as a combustion byproduct. Unlocks earlier than the uranium reactor and fills the early-game planetary power gap.",
       "gameStatus": "active",
       "buildComponents": [
         { "id": "steel_plate", "qty": 20 },
@@ -36,13 +36,13 @@
         { "id": "wire", "qty": 4 }
       ],
       "power": {
-        "maxOutput": 24000,
+        "maxOutput": 22000,
         "unit": "W",
         "unitAsPublished": "W"
       },
       "fuel": {
         "consumesId": "coal_briquette",
-        "rate": 0.1
+        "rate": 0.0333
       },
       "inventory": {
         "maxMass_kg": 4000

@@ -1,35 +1,35 @@
 {
-  "version": "0.1.0",
-  "generatedAt": "2026-05-01",
+  "version": "0.2.0",
+  "generatedAt": "2026-05-02",
   "game": {
     "name": "Space Engineers 2",
     "stage": "Early Access",
-    "dataAsOf": "2026-05-01"
+    "dataAsOf": "2026-05-02"
   },
   "mod": {
     "name": "Coal Power",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "baseGameDataVersion": "1.1.0"
   },
   "sources": [],
-  "notes": "Coal Briquette mirrors the uranium→enriched-uranium pattern: refined via Refinery 7.5 m at a 10:1 compression ratio (vs uranium's 100:1), reflecting coal's much lower energy density. Ash is produced when briquettes burn in the Combustion Generator 2.5 m; its usedIn note forward-references Stone & Concrete's Cement recipe as a future fly-ash additive (real-world pozzolan). No hard dependency in v0.1 — Stone & Concrete's cement recipe is unchanged.",
+  "notes": "Coal Briquette is produced at a 1:1 refining ratio from coal via the Refinery 7.5 m. Unlike the uranium→enriched-uranium chain (100:1 by mass), briquetting doesn't concentrate energy — coal has roughly the same MJ/kg before and after briquetting. The gain is combustion efficiency: briquettes burn cleanly in the Combustion Generator 2.5 m at ~40% electrical efficiency vs ~15% for raw coal. Ash is produced when briquettes burn; its usedIn note forward-references Stone & Concrete's Cement recipe as a future fly-ash additive (real-world pozzolan). No hard dependency — Stone & Concrete's cement recipe is unchanged.",
   "resources": [
     {
       "id": "coal_briquette",
       "displayName": "Coal Briquette",
       "type": "refinery_product",
-      "mass_kg": 10,
+      "mass_kg": 1,
       "volume_liters": null,
       "stackable": true,
       "divisible": false,
-      "description": "Compressed coal dust bonded with pitch. Burns three times hotter than raw coal per unit. Primary fuel for the Combustion Generator 2.5 m.",
+      "description": "Compressed coal dust bonded with pitch. Briquetting reshapes coal for clean, consistent combustion — the refined form yields roughly 2.7× the effective electrical output of raw coal in the Combustion Generator 2.5 m. The gain is a combustion-efficiency gain, not a mass gain (1 coal → 1 briquette, ~15% → ~40% electrical efficiency), matching real-world coal-power economics.",
       "gameStatus": "active",
       "recipes": [
         {
           "producedBy": "Refinery 7.5 m",
-          "ingredients": [{ "id": "coal", "qty": 10 }],
+          "ingredients": [{ "id": "coal", "qty": 1 }],
           "producesQty": 1,
-          "craftingTimeSeconds": 1.2
+          "craftingTimeSeconds": 0.8
         }
       ],
       "usedIn": ["Combustion Generator 2.5 m"],
