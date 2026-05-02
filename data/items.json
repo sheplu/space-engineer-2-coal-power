@@ -1,0 +1,58 @@
+{
+  "version": "0.1.0",
+  "generatedAt": "2026-05-01",
+  "game": {
+    "name": "Space Engineers 2",
+    "stage": "Early Access",
+    "dataAsOf": "2026-05-01"
+  },
+  "mod": {
+    "name": "Coal Power",
+    "version": "0.1.0",
+    "baseGameDataVersion": "1.1.0"
+  },
+  "sources": [],
+  "notes": "Coal Briquette mirrors the uranium→enriched-uranium pattern: refined via Refinery 7.5 m at a 10:1 compression ratio (vs uranium's 100:1), reflecting coal's much lower energy density. Ash is produced when briquettes burn in the Combustion Generator 2.5 m; its usedIn note forward-references Stone & Concrete's Cement recipe as a future fly-ash additive (real-world pozzolan). No hard dependency in v0.1 — Stone & Concrete's cement recipe is unchanged.",
+  "resources": [
+    {
+      "id": "coal_briquette",
+      "displayName": "Coal Briquette",
+      "type": "refinery_product",
+      "mass_kg": 10,
+      "volume_liters": null,
+      "stackable": true,
+      "divisible": false,
+      "description": "Compressed coal dust bonded with pitch. Burns three times hotter than raw coal per unit. Primary fuel for the Combustion Generator 2.5 m.",
+      "gameStatus": "active",
+      "recipes": [
+        {
+          "producedBy": "Refinery 7.5 m",
+          "ingredients": [{ "id": "coal", "qty": 10 }],
+          "producesQty": 1,
+          "craftingTimeSeconds": 1.2
+        }
+      ],
+      "usedIn": ["Combustion Generator 2.5 m"],
+      "wiki": "https://github.com/sheplu/space-engineer-2-coal-power",
+      "dataGaps": ["volume_liters", "balance-vs-uranium-chain"]
+    },
+    {
+      "id": "ash",
+      "displayName": "Ash",
+      "type": "simple_component",
+      "mass_kg": 2,
+      "volume_liters": null,
+      "stackable": true,
+      "divisible": false,
+      "description": "Fine mineral residue left after briquettes are consumed in the Combustion Generator 2.5 m. Forward-looking: real-world fly ash is a supplementary cementitious material (pozzolan) — a future revision of Stone & Concrete's Cement recipe can optionally accept ash alongside stone powder. In v0.1 this is metadata only; the Stone & Concrete mod is not modified.",
+      "gameStatus": "active",
+      "producedBy": "Combustion Generator 2.5 m (combustion byproduct, 1 per briquette consumed)",
+      "usedIn": ["Cement"],
+      "wiki": "https://github.com/sheplu/space-engineer-2-coal-power",
+      "dataGaps": [
+        "volume_liters",
+        "cement-recipe-extension-is-declarative-only"
+      ]
+    }
+  ]
+}

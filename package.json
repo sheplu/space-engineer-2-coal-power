@@ -1,0 +1,18 @@
+{
+  "name": "space-engineer-2-coal-power",
+  "version": "0.1.0",
+  "description": "Coal Power — a Space Engineers 2 mod dataset adding coal, coal briquettes, ash, and a Combustion Generator 2.5 m block that fills the early-game power gap between solar and the uranium reactor.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "check": "npm run validate"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "version": "0.1.0",
+  "generatedAt": "2026-05-01",
+  "game": {
+    "name": "Space Engineers 2",
+    "stage": "Early Access",
+    "dataAsOf": "2026-05-01"
+  },
+  "mod": {
+    "name": "Coal Power",
+    "version": "0.1.0",
+    "baseGameDataVersion": "1.1.0"
+  },
+  "sources": [],
+  "notes": "Coal is a new raw resource — mined via drilling like vanilla ores. Distinct from the Lithology mod's rock compositions: coal is fossilised organic matter, not igneous/sedimentary/metamorphic rock, so it gets its own raw-resource identity rather than being a Lithology rock variant. Biomes favour Verdure and Byblos wetland/forested regions where fossil-bearing strata plausibly form, plus Kemik underground layers. No asteroids — coal is biogenic.",
+  "resources": [
+    {
+      "id": "coal",
+      "displayName": "Coal",
+      "type": "ore",
+      "mass_kg": 1,
+      "volume_liters": null,
+      "stackable": true,
+      "divisible": true,
+      "description": "Fossilised organic raw resource, mined via drilling. Burns directly in the Combustion Generator 2.5 m; refines into denser coal briquettes via the Refinery 7.5 m.",
+      "gameStatus": "active",
+      "locations": {
+        "planets": [
+          {
+            "name": "Verdure",
+            "biomes": [
+              "Taiga",
+              "Tundra",
+              "Coast",
+              "Mountain"
+            ]
+          },
+          {
+            "name": "Byblos",
+            "biomes": [
+              "Savanna",
+              "Tundra",
+              "Underwater"
+            ]
+          },
+          {
+            "name": "Kemik",
+            "biomes": [
+              "Underground Layer 1",
+              "Underground Layer 2"
+            ]
+          }
+        ],
+        "asteroidFields": []
+      },
+      "refinableInto": [
+        "Coal Briquette"
+      ],
+      "wiki": "https://github.com/sheplu/space-engineer-2-coal-power",
+      "dataGaps": [
+        "volume_liters",
+        "biome-placement-first-pass",
+        "wiki-not-yet-authored"
+      ]
+    }
+  ]
+}
